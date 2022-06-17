@@ -11,6 +11,21 @@
         <img src="https://assessme.online/images/logo.png" alt="Logo" width="200px" />
         <span>AssessMe System Status </span>
       </div>
+      <div class="time">
+        <h3 id="displayDateTime" style="text-align: center;"></h3>
+        <script>
+          
+            var today = new Date();
+            var day = today.getDay();
+            var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+            var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var dateTime = date+' '+time;
+             
+            document.getElementById("displayDateTime").innerHTML = dateTime + ' <br> Day :- ' + daylist[day];
+          
+        </script>
+      </div>
       <div id="reports" class="reportContainer"></div>
       <div id="tooltip" class="tooltip" style="opacity: 0">
         <div id="tooltipArrow" class="tooltipArrow"></div>
